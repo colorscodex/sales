@@ -1,144 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Product Landing Page</title>
-    <meta charset="UTF-8">
-    <meta name="author" content="Susana deOliveira">
-    <meta  name="description" content="Responsive Web Design Project">
+/*
+* The CSS box-sizing property allows us to include the padding and border
+* in an element's total width and height. We use universal selector to apply
+* this rule to all elements.
+* And to choose font family.
+*/
 
-    <!-- The viewport is the user's visible area of a web page. -->
-    <!-- The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.-->
-    <!-- A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
 
-    <link href="image/colorscodex-logo.ico" rel="icon" type="image/x-icon">
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
-    <!-- -CSS style -->
-    <link type="text/css" rel="stylesheet" href="css/vegan-recipe-catalogs.css">
-    <link type="text/css" rel="stylesheet" href="css/card.css">
-    <link type="text/css" rel="stylesheet" href="css/customFooter.css">
+.card {
+  width: 300px;
+  height: 565px;
+  /* box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);*/
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  background-color: #fff;
+}
 
-    <!-- Font family: Raleway-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&display=swap" rel="stylesheet">
+.price {
+  margin: 0;
+  border-bottom: 1px solid #bfbfbf; /* hsl(0, 0%, 75%) */
+  padding: 2px 10px;
+  background-color: #e6e6e6;
+  color: #000;
+}
 
-  </head>
-  <body>
-    <header id="header">
-      <!-- link to direct you to the colorcodex website-->
-      <a id="brandLink" href="https://colorscodex.github.io/sitioWeb/inicio.html" target="_blank" title="home ⎮ colorscodex web page" rel="external">
-        <div id="brand">
-          <img id="header-img" src="image/colorscodex-logo.jpg" alt="logo image" title="logo image">
-          <div id="header-title">
-            <h1 id="brand-name">colorscodex</h1>
-            <p id="brand-description">A Vegan Mediterranean Cuisine</p>
-          </div>
-        </div></a>
+#title-cardOne,
+#title-cardTwo,
+#title-cardThree {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
 
-      <nav id="nav-bar">
-        <!--Skip links -->
-        <!-- target: _self, that opens the linked document in the same frame as it was clicked (this is default)-->
-        <ul>
-          <li><a class="nav-link" href="#landingPage" target="_self">About</a></li>
-          <li><a class="nav-link" href="#titleVideo" target="_self" title="Go to the video">Features</a></li>
-          <li><a class="nav-link" href="#catalogs" target="_self" title="Cards to show the catalog cover">Catalogs</a></li>
-        </ul>
-      </nav>
-    </header>
+#description-cardOne,
+#description-cardTwo,
+#description-cardThree {
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+}
 
-    <div class="container">
+figure {
+  margin: 0;
+  padding: 15px 25px 25px 25px;
+}
 
-      <main id="landingPage">
-        <h1 class="landingPage-question">Why Mediterranean Cuisine?</h1>
-        <p class="landingPage-answer">Because it is rich in vegetables, fruits, legumes, cereals (mainly whole grains), which together with the <strong>extra virgin olive oil</strong>, a hallmark of the Mediterranean Cuisine, produces very beneficial effects on cardiovascular disease, greater longevity and better functioning. of the brain, among many other benefits.<sup>[1]</sup></p>
-        <p class="landingPage-answer">And, all the recipes of Mediterranean cuisine are rich in flavors, aromas, colors and have been transmitted, in the homes of the area, from generation to generation. And best of all, they are simple when preparing them.</p>
-        <!-- an external video-->
-        <h1 id="titleVideo" class="landingPage-question">Why are colors important in our diet?</h1>
-        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/HqdxVhY-ZAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#imgCard-paella,
+#imgCard-tortilla,
+#imgCard-caldo {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-        <h1 class="landingPage-question">how can we help you today?</h1>
-        <p class="landingPage-answer">If you want to prepare vegetable based dishes and how it is not usual, you have no ideas. Or, if you would like to have a vegan diet but you don't know where to start.</p>
-        <p class="landingPage-answer">For that or whatever you want to know about veggies recipes, we present you some catalogs, easy to handle and understand, to introduce you to the style of Mediterranean cuisine, a family kitchen that has existed for more than 2,000 years.</p>
+figcaption {
+  margin-top: 20px;
+}
 
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
+#buttonSelect-cardOne,
+#buttonSelect-cardTwo,
+#buttonSelect-cardThree {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px;
+  border-radius: 4px;
+  color: #fff8dc;
+  background-color: #808000;/*olive*/
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  align-items: center;
+}
 
-          <label for="email" id="email-label">E-mail</label>
-          <input id="email" type="email" name="emailaddress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain: Characters followed by an @ sign, followed by more characters, and then a '.'. After the '.' sign, add at least 2 letters from a to z" placeholder="Enter your mail" size="40" required>
+#buttonSelect-cardOne:hover,
+#buttonSelect-cardTwo:hover,
+#buttonSelect-cardThree:hover {
+  font-weight: 600;
+  color: #fff8dc;
+  background-color: #daa520;/*GoldenRod*/
+  cursor: pointer;
+}
 
-          <div class="submission">
-            <!-- Clicking this button will send the data from your form to the URL you specified with your form's action attribute. -->
-            <label for="submit" id="submit-label"></label>
-            <input type="submit" value="Get started!" id="submit">
-          </div>
-        </form>
+@media screen and (max-width: 1100px){
 
-        <h1 id="catalogs" class="landingPage-question">Our Catalogs</h1>
-        <p class="landingPage-answer">Each catalog consists of 10 recipes and also reminds you that fresh and seasonal fruit is also food!</p>
-
-        <div id="containerCard">
-          <!-- Mediterranean card -->
-          <div class="card">
-            <p class="price">US $9.99</p>
-            <h1 id="title-cardOne">Mediterranean</h1>
-            <p id="description-cardOne">Art Cuisine</p>
-            <figure>
-              <img id="imgCard-paella" src="image/mediterranean-cuisine.jpeg" alt="Photograph of a paella, a typical Spanish dish, made only with vegetable ingredients." title="Vegan Mediterranean cuisine: paella">
-              <figcaption>Recipes from the Mediterranean area such as paella, Hummus, couscous, tabulé, fruits...</figcaption>
-            </figure>
-            <label for="buttonSelect-cardOne" id="buttonLabel-cardOne"></label>
-            <button type="button"  value="Select" id="buttonSelect-cardOne">select</button>
-          </div>
-          <!-- Spain card -->
-          <div class="card">
-            <p class="price">US $9.99</p>
-            <h1 id="title-cardTwo">Spain</h1>
-            <p id="description-cardTwo">Art Cuisine</p>
-            <figure>
-              <img id="imgCard-tortilla" src="image/spain-cuisine-tortilla-de-patatas.jpeg" alt="Photograph of a 'tortilla de patatas', a typical Spanish dish, made only with vegetable ingredients." title="Vegan Mediterranean cuisine: tortilla de patatas">
-              <figcaption>Recipes from Spain such as paella, broths, stews, former recipes with beans, fruits...</figcaption>
-            </figure>
-
-            <label for="buttonSelect-cardTwo" id="buttonLabel-cardTwo"></label>
-            <button type="button"  value="Select" id="buttonSelect-cardTwo">select</button>
-          </div>
-          <!-- Portugal card -->
-          <div class="card">
-            <p class="price">US $9.99</p>
-            <h1 id="title-cardThree">Portugal</h1>
-            <p id="description-cardThree">Art Cuisine</p>
-            <figure>
-              <img id="imgCard-caldo" src="image/portugal-cuisine-caldo-verde.jpeg" alt="Photograph of a 'Caldo Verde', a very typical dish of Northern Portugal cuisine, made only with vegetable ingredients." title="Vegan Mediterranean cuisine: caldo verde">
-              <figcaption>Recipes from Portugal such as broths, soups, stews, farmers tradional recipes, fruits...</figcaption>
-            </figure>
-            <!-- Button submit form -->
-            <label for="buttonSelect-cardThree" id="buttonLabel-cardThree"></label>
-            <button type="button"  value="Select" id="buttonSelect-cardThree">select</button>
-          </div>
-        </div>
-      </main>
-      <!-- CUSTOM FOOTER -->
-      <footer>
-        <div class="flex-container decoration">
-          <figure id="image-flexcontainer">
-            <img id="image-footer" src="https://colorscodex.github.io/Portfolio-Site/images/portfolio/interlude.jpg" alt="Gothic Festival: The tavern" title="Photo-entitled: Interlude, September 2017./ Place: The Tavern in the Gothic Festival celebrated in Braga (North of Portugal)./ Author: Susana deOliveira">
-          </figure>
-
-          <div class="colors-page">
-            <p class="text-footer">Colors Page</p>
-            <div class="darkGreen" title="DarkGreen"></div>
-            <div class="white" title="White"></div>
-            <div class="olive" title="Olive"></div>
-          </div>
-        </div>
-        <!-- VALIDATOR CSS3 -->
-        <div class="signature-validator flex-container">
-          <p class="signature">Design by Susana deOliveira ⎮ Responsive Web Design Projects ⎮ December 2019</p>
-          <div class="validator">
-            <a href="https://jigsaw.w3.org/css-validator/validator#css">
-              <img id="validator-img" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="¡CSS Válido!" /></a>
-          </div>
-        </div>
-      </footer>
-      <div class="copyRight">Copyright 2019, COLORSCODEX</div>
-    </div>
-  </body>
-</html>
+  .card {
+    box-shadow: none;
+    border: 1px solid hsl(0, 0%, 75%);
+  }
+}

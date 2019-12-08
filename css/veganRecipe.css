@@ -11,99 +11,350 @@
 }
 
 html,
-body {
+body,
+.container {
   margin: 0;
   padding: 0;
 }
 
-.card {
-  width: 300px;
-  height: 565px;
-  /* box-shadow: 0 4px 15px 7px rgba(0, 0, 0, 0.2);*/
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
-  border-radius: 4px;
-  background-color: #fff;
+/* navbar
+*  ====== */
+
+/* Direct child elements(s) of the flexible container automatically becomes flexible items.*/
+
+#header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px 20px;
 }
 
-.price {
-  margin: 0;
-  border-bottom: 1px solid #bfbfbf; /* hsl(0, 0%, 75%) */
-  padding: 2px 10px;
-  background-color: #e6e6e6;
+#brandLink {
+  width: 50%;
+  text-decoration: none;
+  cursor: pointer;
   color: #000;
 }
 
-#title-cardOne,
-#title-cardTwo,
-#title-cardThree {
-  font-size: 22px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 5px;
-}
+/*  div with an image (logo) and the brand name
+*   =========================================== */
 
-#description-cardOne,
-#description-cardTwo,
-#description-cardThree {
-  font-size: 18px;
-  text-transform: capitalize;
-  text-align: center;
-  margin: 0;
-  padding-bottom: 10px;
-}
-
-figure {
-  margin: 0;
-  padding: 15px 25px 25px 25px;
-}
-
-#imgCard-paella,
-#imgCard-tortilla,
-#imgCard-caldo {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-figcaption {
-  margin-top: 20px;
-}
-
-#buttonSelect-cardOne,
-#buttonSelect-cardTwo,
-#buttonSelect-cardThree {
-  display: block;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px 20px;
-  border-radius: 4px;
-  color: #fff8dc;
-  background-color: #808000;/*olive*/
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
+#brand {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-#buttonSelect-cardOne:hover,
-#buttonSelect-cardTwo:hover,
-#buttonSelect-cardThree:hover {
-  font-weight: 600;
-  color: #fff8dc;
-  background-color: #daa520;/*GoldenRod*/
+/* logo */
+#header-img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+#header-title {
+  width: 90%;
+}
+
+#brand-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#brand-description {
+  margin: 0;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/* navbar with skip-links
+*  ====================== */
+
+#nav-bar {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+/* unordered list */
+#nav-bar ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+/* style */
+#nav-bar li {
+  display: flex;
+  padding: 0 20px;
+  margin: 0 1px;
+  text-align: center;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
   cursor: pointer;
+  color: #000;
+}
+
+/* div container
+*  ============= */
+
+.container {
+  margin: 0;
+  width: 100%;
+}
+
+/* MAIN container
+* =============== */
+
+#landingPage {
+  width: 1100px;
+  padding: 20px 20px 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+ /* TEXT
+ *  ==== */
+
+.landingPage-question {
+  font-weight: 500;
+  font-size: 50px;
+}
+
+.landingPage-answer::first-letter {
+  color: #dc143c; /* Crimson */
+  font-size: xx-large;
+}
+
+.landingPage-answer {
+  font-size: 20px;
+}
+
+/* VIDEO
+*  ===== */
+
+#video {
+  margin: 100px 0;
+}
+
+/* FORM
+*  ==== */
+
+#form {
+  margin: 100px 0;
+  font: 400 22px "Raleway", sans-serif;
+}
+
+#email {
+  width: 100%;
+  padding: 15px 25px; /* with padding property to add space inside the text field.*/
+  margin: 15px 0 20px 0;
+  display: inline-block;
+  border: 1px solid #006400;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: #f5f5f5;
+}
+
+#email:focus {
+  outline: 2px solid #004d00;
+}
+
+/* submit FORM */
+#submit {
+  width: 100%;
+  margin: 0;
+  padding: 20px 20px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #006400; /* DarkGreen */
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1;
+}
+
+#submit:hover {
+  font-weight: 500;
+  color: #fff;
+  background-color: #001a66; /* rgb(0, 26, 102) hsl(225, 100%, 20%) */
+  box-shadow: 12px 15px 20px 0 rgba(69, 69, 69, 0.3);
+  cursor: pointer;
+}
+
+/* Cards
+*  ===== */
+
+#containerCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.card {
+  margin: 50px 30px 50px 30px;
+}
+
+/* Footer
+*  ====== */
+
+.copyRight {
+  text-align: center;
+  background-color: hsl(0, 0%, 75%);
+  padding: 10px 0;
+}
+
+@media screen and (min-width: 651px) and (max-width: 1100px){
+
+  #landingPage {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /*TEXT*/
+  .landingPage-question {
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .landingPage-answer::first-letter {
+    color: #ff0000;
+    font-size: x-large;
+  }
+
+  .landingPage-answer {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1100px){
 
+  #containerCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+
   .card {
-    box-shadow: none;
-    border: 1px solid hsl(0, 0%, 75%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 650px){
+
+  #header {
+    display: block;
+    padding: 10px 10px;
+  }
+
+  /* logo */
+  #header-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #brand,
+  #nav-bar {
+    width: 100%;
+  }
+
+  #brand-name {
+    font-size: 20px;
+    padding-bottom: 0;
+  }
+
+  #nav-bar {
+    margin-top: 10px;
+  }
+
+  #nav-bar ul {
+  display: flex;
+  justify-content: center;
+  }
+
+  #nav-bar li {
+    display: flex;
+    width: 33%;
+    padding: 10px 0;
+    margin: 0 1px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: #006400; /*DarkGreen hsl(120, 100%, 20%)*/
+    border-radius: 4px;
+  }
+
+  #nav-bar li:hover {
+    background-color: hsl(225, 100%, 20%);
+  }
+
+  .nav-link {
+    color: #fff8dc;
+  }
+  /* MAIN */
+  #landingPage {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* TEXT */
+  .landingPage-question {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .landingPage-answer::first-letter {
+    color: #ff0000;
+    font-size: large;
+  }
+
+  .landingPage-answer {
+    font-size: 16px;
+  }
+
+  #form {
+    margin: 100px 0;
+    font: 400 16px "Raleway", sans-serif;
+  }
+
+  #email {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 450px){
+
+  #video {
+    width: 300px;
+    height: auto;
+    margin: 40px 0;
   }
 }
